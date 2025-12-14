@@ -8,13 +8,36 @@ The practice of effective AI-assisted development.
 
 This repository contains a **comprehensive methodology** for Claude Code that transforms how AI assists with software development. It's not just configuration — it's a complete system of principles, workflows, and practices.
 
-When you bootstrap a project with Claude Praxis, you get:
+When you bootstrap with Claude Praxis, you get:
 
-- **Hypothesis-Driven Development** - Test-first thinking as a core methodology
-- **Structured Problem-Solving** - Research workflows and multi-approach validation
 - **Semantic Code Understanding** - Serena MCP for intelligent code navigation
+- **Up-to-Date Documentation** - Context7 MCP for current library docs
+- **Structured Reasoning** - Sequential Thinking MCP for complex problems
+- **Hypothesis-Driven Development** - Test-first thinking as a core methodology
 - **Progressive Knowledge System** - CLAUDE.md → guides → ADRs → memories
 - **Project-Aware Instructions** - Customized to your actual tech stack and conventions
+
+## Two Bootstrap Modes
+
+Claude Praxis has two distinct modes that can run separately or together:
+
+### 1. Environment Setup (once per machine)
+
+Installs global tools that enhance Claude Code for **all** your projects:
+
+- **Serena MCP** - Semantic code understanding and navigation
+- **Context7 MCP** - Up-to-date library documentation in prompts
+- **Sequential Thinking MCP** - Structured reasoning for complex problems
+- **Specialized Agents** - Domain experts (architecture, TDD, debugging, etc.)
+
+### 2. Project Bootstrap (once per project)
+
+Sets up praxis methodology files for a **specific** project:
+
+- Customized `CLAUDE.md` with your conventions
+- Methodology guides (TDD, research, problem-solving)
+- Architecture Decision Records structure
+- Serena project configuration
 
 ## How To Use
 
@@ -26,14 +49,26 @@ Look at https://github.com/rosudrag/claude-praxis
 and use it to bootstrap my project
 ```
 
-3. Claude will:
-   - Perform deep technical and cultural analysis of your project
-   - Install Serena MCP for semantic code understanding
-   - Generate a customized CLAUDE.md with your conventions
-   - Create methodology guides (TDD, research, problem-solving)
-   - Set up Architecture Decision Records
+3. Claude will automatically detect what's needed:
+   - **First time?** → Runs both modes (environment + project)
+   - **Environment done?** → Runs project bootstrap only
+   - **Everything done?** → Offers to verify or update
+
+You can also request specific modes:
+- "Run environment setup only"
+- "Bootstrap this project only"
+- "Verify my praxis installation"
 
 ## What Gets Created
+
+### Global (Environment Setup)
+
+```
+~/.claude/
+└── settings.local.json    # MCP server configuration
+```
+
+### Per-Project (Project Bootstrap)
 
 ```
 your-project/
@@ -52,8 +87,8 @@ your-project/
 ├── .serena/               # Semantic code understanding
 │   ├── project.yml
 │   └── memories/
-└── .claude/               # Claude Code configuration
-    └── settings.local.json
+└── .claude-bootstrap/     # Bootstrap state (for resumption)
+    └── manifest.json
 ```
 
 ## Philosophy
@@ -63,6 +98,7 @@ your-project/
 3. **Research before assuming** - Investigate systematically, don't guess
 4. **Progressive disclosure** - Layer information: quick reference → detailed guides → historical context
 5. **Project-aware** - Adapt to the actual codebase, not generic best practices
+6. **Graceful degradation** - Works without optional tools, better with them
 
 ## Customization
 
@@ -76,7 +112,7 @@ After bootstrapping:
 ## Requirements
 
 - Claude Code CLI or VS Code extension
-- Node.js (for Serena MCP installation)
+- Node.js 18+ (for MCP server installation)
 - Git
 
 ## Contributing
