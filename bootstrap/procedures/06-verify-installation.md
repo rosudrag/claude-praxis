@@ -32,7 +32,12 @@ If Serena was installed:
 | File | Required | Status |
 |------|----------|--------|
 | `.serena/project.yml` | If Serena | Check exists |
-| `.claude/settings.local.json` | If Serena | Check contains serena config |
+| `.claude/settings.local.json` | If Serena/MCP | Check contains serena config |
+
+If MCP servers were installed:
+| File | Required | Status |
+|------|----------|--------|
+| `.claude/settings.local.json` | If MCP | Check contains context7 and sequential-thinking configs |
 
 ### 2. Verify CLAUDE.md Content [AUTO]
 
@@ -62,7 +67,7 @@ Update `.claude-bootstrap/manifest.json`:
   "bootstrap_version": "1.0.0",
   "started_at": "...",
   "completed_at": "2024-01-15T10:45:00Z",
-  "steps_completed": ["analyze", "serena", "agents", "claude-md", "docs", "adrs", "verify"],
+  "steps_completed": ["analyze", "serena", "mcp-servers", "agents", "claude-md", "docs", "adrs", "verify"],
   "steps_skipped": [],
   "verification": {
     "files_created": true,
@@ -86,18 +91,22 @@ Log the final summary:
 >
 > **Tools Configured:**
 > - Serena MCP: [Installed/Skipped]
-> - Specialized Agents: [Installed/Skipped]
+> - Context7 MCP: [Installed/Skipped] - Up-to-date library documentation
+> - Sequential Thinking MCP: [Installed/Skipped] - Structured reasoning
+> - Specialized Agents: [Informed/Skipped]
 >
 > **Verification:**
 > - All files created successfully: [Yes/No]
 > - CLAUDE.md is valid: [Yes/No]
 > - Serena is working: [Yes/No/Not installed]
+> - MCP servers configured: [Yes/No]
 >
 > **Next Steps:**
 > 1. Review and customize `CLAUDE.md` for your project
 > 2. Add project-specific details to the USER_SECTION blocks
 > 3. Create ADRs for existing architectural decisions
 > 4. Add Serena memories as you learn about the codebase
+> 5. Try Context7: ask about a library with "use context7" in your prompt
 >
 > You may need to restart Claude Code for all changes to take effect."
 

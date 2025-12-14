@@ -6,9 +6,10 @@ You are reading this because a user has asked you to bootstrap their project wit
 
 Transform the user's project into a praxis-enabled codebase by:
 1. Installing semantic code tools (Serena MCP)
-2. Installing specialized agents for their tech stack
-3. Generating customized CLAUDE.md and supporting docs
-4. Setting up architecture decision records (ADRs)
+2. Installing essential MCP servers (Context7 for docs, Sequential Thinking for reasoning)
+3. Installing specialized agents for their tech stack
+4. Generating customized CLAUDE.md and supporting docs
+5. Setting up architecture decision records (ADRs)
 
 ---
 
@@ -69,22 +70,24 @@ Follow these procedures in order. Each procedure file contains detailed steps.
 ### Phase 2: Tool Installation
 5. Read [procedures/01-install-serena.md](procedures/01-install-serena.md)
 6. Install and configure Serena MCP (use Serena's onboarding tool)
-7. Read [procedures/02-install-agents.md](procedures/02-install-agents.md)
-8. Direct user to agent installation repo
+7. Read [procedures/01b-install-mcp-servers.md](procedures/01b-install-mcp-servers.md)
+8. Install Context7 and Sequential Thinking MCP servers
+9. Read [procedures/02-install-agents.md](procedures/02-install-agents.md)
+10. Direct user to agent installation repo
 
 ### Phase 3: Content Generation
-9. Read [procedures/03-generate-claude-md.md](procedures/03-generate-claude-md.md)
-10. Generate customized CLAUDE.md using analysis data and templates
-11. Read [procedures/04-generate-docs.md](procedures/04-generate-docs.md)
-12. Create claude-docs/ with relevant guides
-13. Read [procedures/05-setup-adrs.md](procedures/05-setup-adrs.md)
-14. Initialize ADR structure
+11. Read [procedures/03-generate-claude-md.md](procedures/03-generate-claude-md.md)
+12. Generate customized CLAUDE.md using analysis data and templates
+13. Read [procedures/04-generate-docs.md](procedures/04-generate-docs.md)
+14. Create claude-docs/ with relevant guides
+15. Read [procedures/05-setup-adrs.md](procedures/05-setup-adrs.md)
+16. Initialize ADR structure
 
 ### Phase 4: Verification
-15. Read [procedures/06-verify-installation.md](procedures/06-verify-installation.md)
-16. Verify all files were created correctly
-17. Test Serena connectivity (if installed)
-18. Present summary and next steps to user
+17. Read [procedures/06-verify-installation.md](procedures/06-verify-installation.md)
+18. Verify all files were created correctly
+19. Test Serena connectivity (if installed)
+20. Present summary and next steps to user
 
 ## Safety Rules
 
@@ -121,6 +124,7 @@ This enables:
 |------|-------|
 | Project analysis | [procedures/00-analyze-project.md](procedures/00-analyze-project.md) |
 | Serena installation | [procedures/01-install-serena.md](procedures/01-install-serena.md) |
+| MCP servers (Context7, Sequential Thinking) | [procedures/01b-install-mcp-servers.md](procedures/01b-install-mcp-servers.md) |
 | Agent installation | [procedures/02-install-agents.md](procedures/02-install-agents.md) |
 | CLAUDE.md generation | [procedures/03-generate-claude-md.md](procedures/03-generate-claude-md.md) |
 | Docs generation | [procedures/04-generate-docs.md](procedures/04-generate-docs.md) |
